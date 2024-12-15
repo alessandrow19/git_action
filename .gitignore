@@ -1,0 +1,43 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Dependency directories
+.DS_Store
+.idea/
+.vscode/
+.env
+.env.*
+
+# Compilados e temporários
+dist/
+build/
+out/
+tmp/
+*.tmp
+*.bak
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+target/
+
+# JavaScript e TypeScript
+*.js.map
+*.ts.map
+
+# OS/Editor specific files
