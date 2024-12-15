@@ -6,5 +6,5 @@ test('Soma de 3 + 5 deve ser 8', () => {
 });
 
 test('Soma de 0 + 0 deve ser 0', () => {
-  expect(soma(0, 0)).toBe(0);
+  expect(soma(0, 1)).toBe(0);
 });
