@@ -8,26 +8,16 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        environment: [development, homologation, production]
 
     steps:
-    # 1. Checkout do repositório
     - name: Checkout Code
       uses: actions/checkout@v3
 
-    # 2. Configurar Node.js
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18'
+    - name: Set Environment Variable
+      run: echo "NODE_ENV=${{ matrix.environment }}" >> $GITHUB_ENV
 
-    # 3. Instalar dependências
-    - name: Install Dependencies
-      run: npm install
-
-    # 4. Rodar testes
-    - name: Run Tests
-      run: npm test
-
-    # 5. Imprimir mensagem de sucesso
-    - name: Success Message
-      run: echo "Pipeline executado com sucesso!"
+    - name: Run Script
+      run: node index.js
